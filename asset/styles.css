@@ -15,6 +15,7 @@ body {
 }
 header {
 	display: flex;
+	flex-wrap: wrap;	
 	flex-direction: column;
 }
 header .title {
@@ -46,7 +47,7 @@ main .info-container {
 	-webkit-backdrop-filter: blur(7px);
 	border-radius: 20px;
 	max-width: 300px;
-	min-height: 380px;
+	min-height: 350px;
 	position: relative;
 	margin: auto;
 	margin-top: 30px;
@@ -69,14 +70,39 @@ main .info-container {
 	margin-bottom: 20px;
 }
 
-/* copyright */
-.copyright {
-	text-align: center;
-	margin: 15px;
-	color: rgb(202, 202, 202);
-}
-.copyright a {
-	text-decoration: none;
 
-	color: rgb(240, 240, 240);
+@media screen and (max-width: 480px) {
+    body {
+        background-size: cover;
+        background-position: center;
+    }
+
+    .info-container {
+        max-width: 90%;
+        min-height: 300px;
+        padding: 15px;
+    }
+
+    .weather-deg {
+        font-size: 60px;
+    }
+
+    #get-city {
+        width: 90%;
+    }
+}
+@media screen and (min-width: 481px) and (max-width: 1024px) {
+    .info-container {
+        max-width: 350px;
+        min-height: 400px;
+        padding: 20px;
+    }
+
+    .weather-deg {
+        font-size: 70px;
+    }
+
+    #get-city {
+        width: 80%;
+    }
 }
